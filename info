@@ -3,4 +3,6 @@ Usefull links=>{
     http://openjdk.java.net/projects/jigsaw/spec/sotms/#automatic-modules
     https://dzone.com/articles/java-9-modules-part-2-intellij-and-maven
     https://blog.codefx.org/java/java-11-migration-guide/
+    https://blog.codefx.org/tools/maven-on-java-9/
+    https://winterbe.com/posts/2018/08/29/migrate-maven-projects-to-java-11-jigsaw/  <=
 }
