@@ -6,4 +6,19 @@ Usefull links=>{
     https://blog.codefx.org/tools/maven-on-java-9/
     https://winterbe.com/posts/2018/08/29/migrate-maven-projects-to-java-11-jigsaw/  <=
     https://dou.ua/lenta/articles/problems-with-java-9/
+
+
+
+    =>=>https://stackoverflow.com/questions/47878694/jpms-jigsaw-missing-main-class-in-module
 }
+
+OUTPUT[-path=target/modules/ --module se.roland/JAKtor
+       Error: Could not find or load main class JAKtor in module se.roland
+       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland/JAktor
+       Error: Could not find or load main class JAktor in module se.roland
+       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland/JAktor
+       Error: Could not find or load main class JAktor in module se.roland
+       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland
+       module se.roland does not have a ModuleMainClass attribute, use -m <module>/<main-class>
+       [roland@archlinux JAKtor]$
+]
