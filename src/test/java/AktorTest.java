@@ -1,7 +1,6 @@
-import impelements.JAktor;
+import se.roland.se.roland.impelements.JAktor;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class AktorTest {

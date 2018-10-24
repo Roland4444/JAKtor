@@ -1,4 +1,4 @@
-package essentials;
+package se.roland.se.roland.essentials;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
