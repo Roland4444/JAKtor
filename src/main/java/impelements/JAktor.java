@@ -38,6 +38,13 @@ public class JAktor extends Aktor {
     }
 
     public String Address = "";
+
+    public static void main(String[] args) throws InterruptedException {
+        JAktor la1=new JAktor();
+        la1.setAddress("http://127.0.0.1:15555/");
+        la1.spawn();
+    }
+
 }
 
 class Serv extends Thread{

@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
-public class LargeAktorTest {
+public class JAktorTest {
 
     @Test
     public void received_$eq() throws InterruptedException, IOException {
@@ -18,11 +18,12 @@ public class LargeAktorTest {
         la2.setAddress("http://127.0.0.1:7777/");
         la1.spawn();
         la2.spawn();
+        Thread.sleep(1000);
         la1.send("hi".getBytes(),  la2.Address);
         Thread.sleep(500);
         assertEquals(new String("hi".getBytes()), new String(la2.received.getBytes()) );
-        byte[] arr = Files.readAllBytes(new File("/home/roland/Pictures/svEAuGB.jpg").toPath());
+        byte[] arr = Files.readAllBytes(new File("/home/roland/Downloads/msc14.11.25508.2_win10_01.11.2017.zip").toPath());
         la1.send(arr,  la2.Address);
-        Thread.sleep(4500);
+        Thread.sleep(8000);
     }
 }
