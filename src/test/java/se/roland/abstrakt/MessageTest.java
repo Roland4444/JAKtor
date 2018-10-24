@@ -1,6 +1,6 @@
-package se.roland.se.roland.abstrakt;
+package se.roland.abstrakt;
 
-import se.roland.se.roland.essentials.Message;
+import se.roland.essent.Message;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -11,7 +11,7 @@ public class MessageTest {
     public void restoreMessage() {
         Message msg = new Message("message".getBytes(), "yrl");
         Message restored = Message.restoreMessage(Message.saveMessagetoByte(msg));
-        assertEquals(msg.message, restored.message);
+        assertEquals(new String(msg.message), new String(restored.message));
         System.out.println(msg.message);
         System.out.println(restored.message);
         assertEquals(msg.Address, restored.Address);

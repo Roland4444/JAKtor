@@ -1,4 +1,4 @@
-package se.roland.se.roland.essentials;
+package se.roland.essent;
 
 import java.io.IOException;
 

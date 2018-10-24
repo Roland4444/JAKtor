@@ -1,9 +1,10 @@
-package se.roland.se.roland.impelements;
+package se.roland.impl;
 
-import se.roland.se.roland.abstrakt.Aktor;
-import se.roland.se.roland.essentials.Client;
-import se.roland.se.roland.essentials.J11Client;
-import se.roland.se.roland.essentials.Message;
+import se.roland.abstrakt.Aktor;
+import se.roland.essent.Client;
+import se.roland.essent.J11Client;
+import se.roland.essent.Message;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import io.javalin.Javalin;

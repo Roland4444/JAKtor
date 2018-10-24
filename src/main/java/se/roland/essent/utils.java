@@ -1,4 +1,4 @@
-package se.roland.se.roland.essentials;
+package se.roland.essent;
 
 public class utils {
     public static void print(byte[] any){

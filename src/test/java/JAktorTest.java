@@ -1,4 +1,4 @@
-import se.roland.se.roland.impelements.JAktor;
+import se.roland.impl.JAktor;
 import org.junit.Test;
 
 import java.io.File;
@@ -21,7 +21,7 @@ public class JAktorTest {
         la1.send("hi".getBytes(),  la2.Address);
         Thread.sleep(500);
         assertEquals(new String("hi".getBytes()), new String(la2.received.getBytes()) );
-        byte[] arr = Files.readAllBytes(new File("/home/roland/Downloads/msc14.11.25508.2_win10_01.11.2017.zip").toPath());
+        byte[] arr = Files.readAllBytes(new File("info").toPath());
         la1.send(arr,  la2.Address);
 
     }
