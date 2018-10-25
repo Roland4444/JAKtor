@@ -9,7 +9,7 @@ class Serv extends Thread{
 
    @Override
    public void run(){
-        System.out.println("aktor adress//>"+aktor.Address);
+        System.out.println("se.roland.aktor adress//>"+aktor.Address);
         Javalin app = Javalin.create().start(aktor.getPortFromURL(aktor.Address));
         System.out.println("STARTING JAVALIN on"+aktor.getPortFromURL(aktor.Address));
         app.post("/", ctx -> aktor.receive(ctx.bodyAsBytes()));

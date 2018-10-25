@@ -27,5 +27,5 @@ OUTPUT[-path=target/modules/ --module se.roland/JAKtor
 
 PACKAGE: mvn package
 
-STARTING :  java --module-path target/modules -m se.roland.jakt/se.roland.aktor.impl.JAktor
+STARTING :  java --module-path target/modules -m se.roland.jaktor/se.roland.se.roland.aktor.impl.JAktor
 
