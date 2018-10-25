@@ -21,8 +21,12 @@ public class JAktorTest {
         la1.send("hi".getBytes(),  la2.Address);
         Thread.sleep(500);
         assertEquals(new String("hi".getBytes()), new String(la2.received.getBytes()) );
-        byte[] arr = Files.readAllBytes(new File("info").toPath());
+        long startTime = System.currentTimeMillis();
+        byte[] arr = Files.readAllBytes(new File("/home/roland/Downloads/msc14.11.25508.2_win10_01.11.2017.zip").toPath());
         la1.send(arr,  la2.Address);
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        System.out.println("total="+elapsedTime/1000+"   Sekunden");
 
     }
 }
