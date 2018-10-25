@@ -1,4 +1,4 @@
-import se.roland.impl.JAktor;
+import se.roland.aktor.impl.JAktor;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

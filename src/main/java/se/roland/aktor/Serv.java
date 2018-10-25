@@ -1,6 +1,6 @@
-package se.roland;
+package se.roland.aktor;
 
-import se.roland.impl.JAktor;
+import se.roland.aktor.impl.JAktor;
 import io.javalin.Javalin;
 
 

@@ -1,4 +1,4 @@
-package se.roland.essent;
+package se.roland.aktor.essent;
 
 import java.io.*;
 
