@@ -1,4 +1,4 @@
-package se.roland.aktor.abstrakt;
+package abstrakt;
 
 import java.io.IOException;
 

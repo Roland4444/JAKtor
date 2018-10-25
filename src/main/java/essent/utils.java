@@ -1,4 +1,4 @@
-package se.roland.aktor.essent;
+package essent;
 
 public class utils {
     public static void print(byte[] any){

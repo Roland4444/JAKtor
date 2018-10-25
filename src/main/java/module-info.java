@@ -1,5 +1,5 @@
 open module se.roland.jaktor {
-    exports se.roland.aktor.impl;
+    exports impl;
     requires javalin;
     requires java.net.http;
 }

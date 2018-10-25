@@ -1,4 +1,4 @@
-import se.roland.aktor.impl.JAktor;
+import impl.JAktor;
 import org.junit.Test;
 
 import java.io.File;

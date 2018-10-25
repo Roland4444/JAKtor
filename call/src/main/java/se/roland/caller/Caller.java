@@ -1,6 +1,6 @@
 package se.roland.caller;
 
-import se.roland.aktor.impl.JAktor;
+import impl.JAktor;
 
 public class Caller {
     public static void main(String[] args) throws InterruptedException {

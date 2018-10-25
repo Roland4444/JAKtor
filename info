@@ -16,10 +16,10 @@ Usefull links=>{
 
 OUTPUT[-path=target/modules/ --module se.roland/JAKtor
        Error: Could not find or load main class JAKtor in module se.roland
-       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland/JAktor
-       Error: Could not find or load main class JAktor in module se.roland
-       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland/JAktor
-       Error: Could not find or load main class JAktor in module se.roland
+       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland/impl.JAktor
+       Error: Could not find or load main class impl.JAktor in module se.roland
+       [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland/impl.JAktor
+       Error: Could not find or load main class impl.JAktor in module se.roland
        [roland@archlinux JAKtor]$ java --add-opens java.base/java.lang=javalin --module-path=target/modules/ --module se.roland
        module se.roland does not have a ModuleMainClass attribute, use -m <module>/<main-class>
        [roland@archlinux JAKtor]$
@@ -27,5 +27,8 @@ OUTPUT[-path=target/modules/ --module se.roland/JAKtor
 
 PACKAGE: mvn package
 
-STARTING :  java --module-path target/modules -m se.roland.jaktor/se.roland.se.roland.aktor.impl.JAktor
+STARTING :
+                    <PATH BUILDS>       <MODULE>   <PACKAGE><class>
+java --module-path target/modules -m se.roland.jaktor/impl.JAktor
+
 

@@ -1,9 +1,9 @@
-package se.roland.aktor.impl;
+package impl;
 
-import se.roland.aktor.abstrakt.Aktor;
-import se.roland.aktor.essent.J11Client;
-import se.roland.aktor.essent.Message;
-import se.roland.aktor.essent.Client;
+import abstrakt.Aktor;
+import essent.J11Client;
+import essent.Message;
+import essent.Client;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

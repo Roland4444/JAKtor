@@ -1,6 +1,6 @@
-package se.roland.aktor.abstrakt;
+package abstrakt;
 
-import se.roland.aktor.essent.Message;
+import essent.Message;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

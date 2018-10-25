@@ -4,4 +4,4 @@ free LGPL inspired Erlang Large Aktor conception for sending messaging via http.
 
 PACKAGE: mvn package
 
-STARTING : java --module-path target/modules -m se.roland/se.roland.impl.JAktor
+STARTING : java --module-path target/modules -m se.roland/se.roland.impl.impl.JAktor

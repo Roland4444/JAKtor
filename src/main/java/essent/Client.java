@@ -1,4 +1,4 @@
-package se.roland.aktor.essent;
+package essent;
 
 import java.io.IOException;
 
