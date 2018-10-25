@@ -9,3 +9,18 @@ STARTING :
                     <PATH BUILDS>       <MODULE>   <PACKAGE><class>
 java --module-path target/modules -m se.roland.jaktor/impl.JAktor
 
+
+To reuse module in maven => mvn clean install
+
+add in dependency
+
+
+        <dependency>
+            <groupId>se.roland</groupId>
+            <artifactId>JAKtor</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        
