@@ -24,3 +24,7 @@ OUTPUT[-path=target/modules/ --module se.roland/JAKtor
        module se.roland does not have a ModuleMainClass attribute, use -m <module>/<main-class>
        [roland@archlinux JAKtor]$
 ]
+
+PACKAGE: mvn package
+
+STARTING :  java --module-path target/modules -m se.roland/se.roland.impl.JAktor
