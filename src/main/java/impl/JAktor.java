@@ -49,7 +49,12 @@ public class JAktor extends Aktor {
 
     @Override
     public void terminate(){
+        System.out.print("\n\n\nSHUTTING DOWN JAVALIN.....\n\n\n");
+        serv.stopJavalin();
         serv.stop();
+        serv.interrupt();
+
+
     }
 
     public String Address = "";
@@ -63,17 +68,21 @@ public class JAktor extends Aktor {
 }
 
 class Serv extends Thread{
-    JAktor aktor=null;
-
+   JAktor aktor=null;
+   public Javalin app;
    @Override
    public void run(){
         System.out.println("se.roland.aktor adress//>"+aktor.Address);
-        Javalin app = Javalin.create().start(aktor.getPortFromURL(aktor.Address));
+        app = Javalin.create().start(aktor.getPortFromURL(aktor.Address));
         System.out.println("STARTING JAVALIN on"+aktor.getPortFromURL(aktor.Address));
         app.post("/", ctx -> aktor.receive(ctx.bodyAsBytes()));
     }
 
     public void setAktor(JAktor inp) {
         this.aktor=inp;
+    }
+
+    public void stopJavalin(){
+       app.stop();
     }
 }
