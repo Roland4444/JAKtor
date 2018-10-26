@@ -18,8 +18,8 @@ add in dependency
         <dependency>
             <groupId>se.roland</groupId>
             <artifactId>JAKtor</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-
+In Version 1.2 added method terminate to correct closing Aktor
 
