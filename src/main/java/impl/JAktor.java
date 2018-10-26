@@ -7,10 +7,19 @@ import essent.Client;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import io.javalin.Javalin;
 
 
 public class JAktor extends Aktor {
+    private  Serv serv;
+    public String getURL_thisAktor() throws UnknownHostException {
+        InetAddress inetAddress = InetAddress. getLocalHost();
+        String addr = inetAddress. getHostAddress();
+        return "http://"+addr+":"+getPortFromURL(this.Address)+"/";
+    }
     Message msg = new Message("".getBytes(), "");
     Client client = new J11Client();
     public String received = "";
@@ -32,10 +41,15 @@ public class JAktor extends Aktor {
 
     @Override
     public void spawn() throws InterruptedException {
-        Serv serv = new Serv();
+        serv = new Serv();
         serv.setAktor(this);
         serv.start();
 
+    }
+
+    @Override
+    public void terminate(){
+        serv.stop();
     }
 
     public String Address = "";
