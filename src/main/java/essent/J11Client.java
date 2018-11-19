@@ -6,7 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class J11Client extends Client {
-    HttpClient client = HttpClient.newHttpClient();
+    public HttpClient client = HttpClient.newHttpClient();
 
     @Override
     public int send(byte[] serializedMessage, String whom) throws IOException {

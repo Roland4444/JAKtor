@@ -21,7 +21,7 @@ public class JAktor extends Aktor {
         return "http://"+addr+":"+getPortFromURL(this.Address)+"/";
     }
     Message msg = new Message("".getBytes(), "");
-    Client client = new J11Client();
+    public Client client = new J11Client();
     public String received = "";
     public void setAddress(String adr){
         this.Address=adr;
