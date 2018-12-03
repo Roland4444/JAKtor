@@ -1,4 +1,4 @@
-open module se.roland.jaktor {
+open module uk.roland.jaktor {
     exports impl;
     exports essent;
     requires javalin;

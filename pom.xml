@@ -9,7 +9,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
-    <groupId>se.roland</groupId>
+    <groupId>uk.roland</groupId>
     <artifactId>JAKtor</artifactId>
     <version>1.6-SNAPSHOT</version>
     <dependencies>

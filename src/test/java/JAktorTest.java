@@ -1,4 +1,5 @@
 import impl.JAktor;
+import io.javalin.Javalin;
 import org.junit.Test;
 
 import java.io.File;
@@ -29,4 +30,13 @@ public class JAktorTest {
         System.out.println("total="+elapsedTime/1000+"   Sekunden");
 
     }
+
+    @Test
+    public void simpleJav(){
+        Javalin app = Javalin.create().start(7000);
+        app.get("/", ctx -> ctx.result("Hello World"));
+       // while (true){}
+    }
+
+
 }
