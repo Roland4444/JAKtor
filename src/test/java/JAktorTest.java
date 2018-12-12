@@ -120,7 +120,6 @@ public class JAktorTest {
         msg.pseudo=operator;
         msg.byteToWork =message.getBytes();
 
-
         sender.send(MessageSMEV.saveMessageSMEV(msg),"http://127.0.0.1:20000/");//);");//receiver.Address);
 
         Thread.sleep(2500);
