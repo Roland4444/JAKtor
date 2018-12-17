@@ -15,8 +15,8 @@
     <dependencies>
         <dependency>
             <groupId>ch.roland</groupId>
-            <artifactId>EBSMessage</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <artifactId>Messaging</artifactId>
+            <version>1.8-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

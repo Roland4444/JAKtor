@@ -1,4 +1,5 @@
-import Message.MessageSMEV;
+
+import Message.toSMEV.MessageSMEV;
 import impl.JAktor;
 import impl.echoJAKtor;
 import io.javalin.Javalin;
@@ -6,11 +7,19 @@ import org.junit.Test;
 
 
 import java.io.*;
+import java.net.UnknownHostException;
 import java.nio.file.Files;
 
 import static org.junit.Assert.assertEquals;
 
 public class JAktorTest {
+
+    @Test
+    public void getAddress() throws UnknownHostException {
+        JAktor la1=new JAktor();
+        la1.setAddress("http://127.0.0.1:5555/");
+        assertEquals("http://80.87.98.54:5555/", la1.rollbackAdressURL() );
+    }
 
     @Test
     public void received_$eq() throws InterruptedException, IOException {
@@ -116,9 +125,9 @@ public class JAktorTest {
 
 
         MessageSMEV msg = new MessageSMEV();
-        msg.Id="0000";
+        msg.ID="0000";
         msg.pseudo=operator;
-        msg.byteToWork =message.getBytes();
+        msg.DataToWork =message.getBytes();
 
         sender.send(MessageSMEV.saveMessageSMEV(msg),"http://127.0.0.1:20000/");//);");//receiver.Address);
 

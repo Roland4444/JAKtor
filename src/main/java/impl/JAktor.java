@@ -53,8 +53,24 @@ public class JAktor extends Aktor {
         serv.stopJavalin();
         serv.stop();
         serv.interrupt();
+    }
+
+    public String rollbackAdressURL() throws UnknownHostException {
+        InetAddress ip=null;
+        String hostname;
+        try {
+            ip = InetAddress.getLocalHost();
+            hostname = ip.getHostName();
+            System.out.println("Your current IP address : " + ip);
+            System.out.println("Your current Hostname : " + hostname);
+
+        } catch (UnknownHostException e) {
+
+            e.printStackTrace();
+        }
 
 
+        return "http://"+ ip.getHostAddress()+":"+getPortFromURL(this.Address)+"/";
     }
 
     public String Address = "";
