@@ -42,9 +42,9 @@ public class echoJAKtorTest {
         assertEquals(initial, receiver.received);
 
         Thread.sleep(1000);
-      //  sender.send(message.getBytes(), receiver.Address);//);");//receiver.Address);
+        sender.send(message.getBytes(), receiver.Address);//);");//receiver.Address);
 
-        Thread.sleep(25500);
+        Thread.sleep(500);
 
         assertEquals(message, receiver.received);
 

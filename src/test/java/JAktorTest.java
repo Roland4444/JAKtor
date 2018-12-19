@@ -1,6 +1,7 @@
 
 import Message.abstractions.BinaryMessage;
 import Message.toSMEV.MessageSMEV;
+
 import impl.JAktor;
 import impl.echoJAKtor;
 import io.javalin.Javalin;
@@ -51,8 +52,8 @@ public class JAktorTest {
     }
 
 
-    @Test
-    public void sendBiometruPackage() throws InterruptedException, IOException {
+    //@Test
+    public void sendBiometruPackage() throws InterruptedException, IOException {//need EBSservice works (in SM3)
         var sender = new echoJAKtor();
         sender.setAddress("http://127.0.0.1:12121/");
         sender.spawn();
