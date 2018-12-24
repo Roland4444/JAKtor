@@ -1,5 +1,8 @@
 package impl;
 
+import Message.abstractions.BinaryMessage;
+import Message.internal.FIAS.FIASCodeInit;
+import Message.internal.FIAS.FIASResult;
 import org.junit.Test;
 
 import javax.net.ssl.KeyManager;
@@ -49,6 +52,35 @@ public class echoJAKtorTest {
         assertEquals(message, receiver.received);
 
     }
+
+    @Test
+    public void sendfias() throws InterruptedException, IOException {
+        var message = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" +
+                "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+        var initial ="";
+        var sender = new echoJAKtor();
+        sender.setAddress("http://80.87.98.54:17777/");
+        sender.spawn();
+
+        FIASCodeInit msg = new FIASCodeInit();
+        String normal ="Астрахань Краснодарская 47 кв 53";
+        String bad = "^&676776t45yggbdhrfbghdfbgdjgbdgdgdhd";
+        msg.AddressGeographical=normal;
+        msg.AddressToReply=sender.Address;
+        msg.ID="0000";
+
+        Thread.sleep(1000);
+        sender.send(BinaryMessage.savedToBLOB(msg), "http://80.87.98.54:24000/");//);");//receiver.Address);
+
+        Thread.sleep(3000);
+        FIASResult restored = (FIASResult) BinaryMessage.restored(sender.buffer);
+
+        System.out.println("RESULT==>"+restored.Result);
+
+
+    }
+
+
 
  //   @Test
     public void simpleHTTP() throws IOException, InterruptedException, NoSuchAlgorithmException, KeyManagementException {
