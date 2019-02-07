@@ -1,7 +1,7 @@
 
+
 import Message.abstractions.BinaryMessage;
 import Message.toSMEV.MessageSMEV;
-
 import impl.JAktor;
 import impl.echoJAKtor;
 import io.javalin.Javalin;
@@ -52,7 +52,7 @@ public class JAktorTest {
     }
 
 
-    //@Test
+    @Test
     public void sendBiometruPackage() throws InterruptedException, IOException {//need EBSservice works (in SM3)
         var sender = new echoJAKtor();
         sender.setAddress("http://127.0.0.1:12121/");
@@ -130,10 +130,18 @@ public class JAktorTest {
         msg.ID="0000";
         msg.pseudo=operator;
         msg.DataToWork =message.getBytes();
+        msg.addressToReply="http://127.0.0.1:12121/";
+   //     for (int i=0; i<10; i++){
+        msg.ID=Integer.toString(0);
+            sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20000/");//);");//receiver.Address);
+      //      sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20001/");
+      //      sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20002/");
+      //      sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20003/");
+            Thread.sleep(10);
+    //        System.out.println(i+">>>>");
 
-        sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20000/");//);");//receiver.Address);
 
-        Thread.sleep(2500);
+        Thread.sleep(2000);
 
 
     }
