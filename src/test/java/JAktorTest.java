@@ -133,7 +133,7 @@ public class JAktorTest {
         msg.addressToReply="http://127.0.0.1:12121/";
    //     for (int i=0; i<10; i++){
         msg.ID=Integer.toString(0);
-            sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20000/");//);");//receiver.Address);
+        sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20000/");//);");//receiver.Address);
       //      sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20001/");
       //      sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20002/");
       //      sender.send(BinaryMessage.savedToBLOB(msg),"http://127.0.0.1:20003/");
