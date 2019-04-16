@@ -7,7 +7,9 @@ import essent.Client;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 import java.net.UnknownHostException;
 
 import io.javalin.Javalin;
@@ -57,6 +59,14 @@ public class JAktor extends Aktor {
 
     public String rollbackAdressURL() throws UnknownHostException {
         InetAddress ip=null;
+        String ipString = null;
+        try(final DatagramSocket socket = new DatagramSocket()){
+            socket.connect(InetAddress.getByName("8.8.8.8"), 10002);
+            ipString = socket.getLocalAddress().getHostAddress();
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
+
         String hostname;
         try {
             ip = InetAddress.getLocalHost();
@@ -69,8 +79,9 @@ public class JAktor extends Aktor {
             e.printStackTrace();
         }
 
+         return "http://"+ ipString+":"+getPortFromURL(this.Address)+"/";
 
-        return "http://"+ ip.getHostAddress()+":"+getPortFromURL(this.Address)+"/";
+       // return "http://"+ ip.getHostAddress()+":"+getPortFromURL(this.Address)+"/";
     }
 
     public String Address = "";
