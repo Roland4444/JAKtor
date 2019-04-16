@@ -52,7 +52,7 @@ public class JAktorTest {
     }
 
 
-    @Test
+    //@Test
     public void sendBiometruPackage() throws InterruptedException, IOException {//need EBSservice works (in SM3)
         var sender = new echoJAKtor();
         sender.setAddress("http://127.0.0.1:12121/");

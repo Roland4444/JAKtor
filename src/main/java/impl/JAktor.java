@@ -92,7 +92,12 @@ class Serv extends Thread{
         app = Javalin.create().start(aktor.getPortFromURL(aktor.Address));
         System.out.println("STARTING JAVALIN on"+aktor.getPortFromURL(aktor.Address));
         app.post("/", ctx -> aktor.receive(ctx.bodyAsBytes()));
-    }
+        try {
+           System.out.println("Rollback address=>"+aktor.rollbackAdressURL());
+        } catch (UnknownHostException e) {
+           e.printStackTrace();
+        }
+   }
 
     public void setAktor(JAktor inp) {
         this.aktor=inp;
